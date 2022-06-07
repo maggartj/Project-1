@@ -6,7 +6,7 @@ import com.project1.MainDriver;
 import com.project1.dao.AuthenticationDAO;
 import com.project1.dao.RequestDAO;
 import com.project1.service.AuthenticationService;
-
+import com.project1.service.Prometheus;
 import com.project1.service.RequestService;
 
 import io.javalin.http.Context;
@@ -23,7 +23,8 @@ public class RequestController implements RequestService, AuthenticationService{
 	
 	//-----------------------------------login
 	public void login(Context ctx) {
-		MainDriver.counter(); //updates prometheus for login attempts
+		Prometheus prom = new Prometheus();
+		prom.counter();	//updates prometheus for login attempts
 		AuthenticationDAO authDao = new AuthenticationDAO();
 		String username = ctx.formParam("username");
 		String password = ctx.formParam("password");
