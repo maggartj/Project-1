@@ -37,13 +37,13 @@ public class RequestMapping {
 					
 				});
 			
-			app.post("/admin/requestapproval", ctx -> { //approve requests here
+			app.put("/admin/requestapproval", ctx -> { //approve requests here
 				
 					req.requestApproval(ctx);
 			
 				});
 			
-			app.post("/admin/requestdenial", ctx -> { //deny requests here
+			app.put("/admin/requestdenial", ctx -> { //deny requests here
 				
 					req.requestDenial(ctx);
 			

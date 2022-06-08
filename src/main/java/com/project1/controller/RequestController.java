@@ -2,7 +2,6 @@ package com.project1.controller;
 
 import java.sql.SQLException;
 
-import com.project1.MainDriver;
 import com.project1.dao.AuthenticationDAO;
 import com.project1.dao.RequestDAO;
 import com.project1.service.AuthenticationService;
@@ -10,7 +9,6 @@ import com.project1.service.Prometheus;
 import com.project1.service.RequestService;
 
 import io.javalin.http.Context;
-import io.micrometer.core.instrument.Counter;
 import io.micrometer.prometheus.PrometheusConfig;
 import io.micrometer.prometheus.PrometheusMeterRegistry;
 

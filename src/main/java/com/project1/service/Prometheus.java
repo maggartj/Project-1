@@ -23,20 +23,18 @@ public class Prometheus {
 		super();
 	}
 	
-	static PrometheusMeterRegistry registry = new PrometheusMeterRegistry(PrometheusConfig.DEFAULT);
-	static Javalin app = Javalin.create( config -> {
-		config.registerPlugin(new MicrometerPlugin(registry));
-			}
-			).start(7070);
+	public static PrometheusMeterRegistry registry = new PrometheusMeterRegistry(PrometheusConfig.DEFAULT);
 	
+	
+	static Counter counter = Counter.builder("total_login_attempts")
+			.description("The number of login attempts")
+			.tag("purpose", "tracking").register(registry);
 	
 	public static double counter() {
-		Counter counter = Counter.builder("total_login_attempts")
-				.description("The number of login attempts")
-				.tag("purpose", "tracking").register(registry);
-		counter.increment(1);
+			counter.increment(1);
 		return counter.count();
-	}
+			}
+	
 	public void monitoring() {
 		
 			
@@ -60,13 +58,9 @@ public class Prometheus {
 
 	 
 	
-	 RequestMapping.configureRoutes(app);
+	
 	 
-	 
-	 	app.get("/prometheus", ctx -> {
-		 
-			 ctx.result(registry.scrape());
-		 });
+	
 
 	}
 
