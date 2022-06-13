@@ -2,7 +2,7 @@ package com.project1;
 import java.io.File;
 
 import com.project1.controller.RequestMapping;
-import com.project1.service.Prometheus;
+import com.project1.util.Prometheus;
 
 import io.javalin.Javalin;
 import io.javalin.plugin.metrics.MicrometerPlugin;
@@ -29,7 +29,7 @@ public class MainDriver {
 		
 		 
 			
-		 app.get("/metrics", ctx -> {
+		 app.get("/prometheus", ctx -> {
 				 
 				 ctx.result(Prometheus.registry.scrape());
 			 });

@@ -5,8 +5,8 @@ import java.sql.SQLException;
 import com.project1.dao.AuthenticationDAO;
 import com.project1.dao.RequestDAO;
 import com.project1.service.AuthenticationService;
-import com.project1.service.Prometheus;
 import com.project1.service.RequestService;
+import com.project1.util.Prometheus;
 
 import io.javalin.http.Context;
 import io.micrometer.prometheus.PrometheusConfig;
