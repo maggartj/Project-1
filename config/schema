@@ -1,0 +1,10 @@
+# This file contains information about the schema for the Employment Reimbursement system.
+# You should first create a database, which you can do using the DB manager of your choice.
+# The schema consists of three simple tables. My recommendation for setup is as follows:
+CREATE DATABASE newdb
+
+CREATE TABLE employee ( username varchar(10), upassword varchar(15), ismanager boolean );
+CREATE TABLE requests ( username varchar(10), newRequest char(7), amount decimal(5,2), pending boolean, approved boolean, timestamp timestamp default current_timestamp );
+CREATE TABLE history ( username varchar(10), request char(7), amount decimal(5,2), timestamp timestamp default current_timestamp );
+
+# Currently, there are no checks for referential integrity because it is unnecessary in this simple implementation of the system
