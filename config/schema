@@ -1,6 +1,7 @@
 # This file contains information about the schema for the Employment Reimbursement system.
 # You should first create a database, which you can do using the DB manager of your choice.
-# The schema consists of three simple tables. My recommendation for setup is as follows:
+# The schema consists of three simple tables. Once the tables are set up, you will need to
+# add a manager to the employee table. My recommendation for setup is as follows:
 CREATE DATABASE newdb
 
 CREATE TABLE employee ( username varchar(10), upassword varchar(15), ismanager boolean );
