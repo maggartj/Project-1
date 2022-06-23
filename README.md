@@ -23,7 +23,7 @@ Monitoring is also implemented, using Prometheus and Grafana.
 ## Getting Started
 First, you should create a work-space and clone this repo. You need to have Git installed. Install Git in Windows, or on your Linux machine, 
 and you can begin cloning by clicking on `"Code"`, which is at the top of this page, clicking on `"HTTPS"`, and copying the URL. 
-Open a terminal and navigate to your working directory. At the command line, type `git init .` and press `ENTER`. Next, type 
+Open a terminal and navigate to your working directory. Next, type 
 `git clone <paste aforementioned URL here>` and press `ENTER`. Once the the repo has been cloned, you can begin your configuration. I will leave it to
 you to decide if you want to run the server locally, or on a remote instance with the provider of your choice. The schema for the database is in the `config` folder, 
 within a file labeled `"schema"`. Since this project is intended to be run 
