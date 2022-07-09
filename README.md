@@ -14,13 +14,12 @@ Monitoring is also implemented, using Prometheus and Grafana.
 * Docker
 * Postman
 ## Features
-* Session-based authentication
+* Stateless
 * Prometheus metrics
 * DB agnostic
 ## To-do
 * HTTP logging
 * Exception mapping
-* Refactor RequestController into the Service layer
 ## Getting Started
 First, you should create a work-space and clone this repo. You need to have Git installed. Install Git in Windows, or on your Linux machine, 
 and you can begin cloning by clicking on `"Code"`, which is at the top of this page, clicking on `"HTTPS"`, and copying the URL. 
