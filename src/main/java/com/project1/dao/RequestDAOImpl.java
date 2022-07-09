@@ -12,9 +12,9 @@ import com.project1.util.ConnectionFactory;
 import io.javalin.http.Context;
 
 
-public class RequestDAO {
+public class RequestDAOImpl implements RequestDAO{
 
-	public RequestDAO() {
+	public RequestDAOImpl() {
 		super();	
 	}
 	
@@ -90,7 +90,7 @@ public class RequestDAO {
 		
 	}
 
-	private void updateHistory(Context ctx) throws SQLException {
+	public void updateHistory(Context ctx) throws SQLException {
 		
 		EmployeeRequest e = ctx.bodyAsClass(EmployeeRequest.class);
 		String sql = "INSERT INTO history VALUES (?, ?, ?)";

@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 import com.project1.util.ConnectionFactory;
 
-public class AuthenticationDAO {
+public class AuthenticationDAOImpl implements AuthenticationDAO{
 	
-	public AuthenticationDAO(){
+	public AuthenticationDAOImpl(){
 		super();
 	}
 

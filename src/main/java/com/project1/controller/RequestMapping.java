@@ -1,11 +1,12 @@
 package com.project1.controller;
-import com.project1.dao.AuthenticationDAO;
+import com.project1.dao.AuthenticationDAOImpl;
+
 import io.javalin.Javalin;
 
 public class RequestMapping {
 
 	private static RequestController req = new RequestController();
-	private static AuthenticationDAO authDao = new AuthenticationDAO();
+	private static AuthenticationDAOImpl authDao = new AuthenticationDAOImpl();
 	
 
 
