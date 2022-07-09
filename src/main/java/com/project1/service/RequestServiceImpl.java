@@ -65,7 +65,7 @@ public class RequestServiceImpl implements RequestService{
 		public void getPending(Context ctx){
 			
 			String user = ctx.formParam("username");
-			String check = ctx.cachedSessionAttribute("username").toString(); 
+			String check = ctx.cookieStore("username"); 
 			
 			if(user.equalsIgnoreCase(check)) {
 
@@ -82,8 +82,7 @@ public class RequestServiceImpl implements RequestService{
 		public void getHistory(Context ctx){
 			
 			String user = ctx.formParam("username");
-			String check = ctx.cachedSessionAttribute("username").toString(); 
-			
+			String check = ctx.cookieStore("username");
 			if(user.equalsIgnoreCase(check)) {
 
 				 try {

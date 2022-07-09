@@ -27,7 +27,7 @@ public class RequestMapping {
 			app.before("/admin/*", ctx -> {  //redirects in case of unauthorized access
 				
 				if(!authDao.check()) {
-				ctx.redirect("http://localhost:7070/");
+				ctx.status(403);
 				}
 				
 				});
@@ -83,7 +83,7 @@ public class RequestMapping {
 			//endpoint for logging out
 			app.post("/logout", ctx -> {
 				
-				ctx.consumeSessionAttribute("username");
+				ctx.clearCookieStore();
 				ctx.status(200);
 			});
 			
