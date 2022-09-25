@@ -12,7 +12,7 @@ import com.project1.util.ConnectionFactory;
 import io.javalin.http.Context;
 
 
-public class RequestDAOImpl implements RequestDAO{
+public class RequestDAOImpl {
 
 	public RequestDAOImpl() {
 		super();	
