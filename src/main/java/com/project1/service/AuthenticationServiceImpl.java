@@ -5,7 +5,7 @@ import com.project1.util.Prometheus;
 
 import io.javalin.http.Context;
 
-public class AuthenticationServiceImpl implements AuthenticationService{
+public class AuthenticationServiceImpl {
 	
 	public AuthenticationServiceImpl() {
 		super();
