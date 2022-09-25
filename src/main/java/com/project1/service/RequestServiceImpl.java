@@ -6,7 +6,7 @@ import com.project1.dao.RequestDAOImpl;
 
 import io.javalin.http.Context;
 
-public class RequestServiceImpl implements RequestService{
+public class RequestServiceImpl {
 	
 	public RequestServiceImpl() {
 		super();
